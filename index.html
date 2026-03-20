@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Brokerage Intelligence Report — Get Featured | AI-Powered Growth for Real Estate</title>
-<meta name="description" content="A quarterly research publication featuring top real estate brokers who are thinking differently about AI and automation. Get featured. Get free publicity. Get results.">
+<title>Every Missed Call Costs You $15,000 | Brokerage Intelligence</title>
+<meta name="description" content="Stop losing commission checks to missed calls. Our AI answers 24/7, qualifies every lead, books appointments automatically. $497/mo.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -12,32 +12,33 @@
 :root{
   --bg:#060609;
   --bg-card:#0d0d14;
-  --bg-card-hover:#12121c;
-  --accent:#7c3aed;
-  --accent-light:#a78bfa;
-  --accent-glow:rgba(124,58,237,.12);
+  --accent:#667eea;
+  --accent-light:#818cf8;
+  --accent-glow:rgba(102,126,234,.12);
+  --purple:#764ba2;
   --gold:#f59e0b;
   --gold-light:#fbbf24;
   --gold-glow:rgba(245,158,11,.1);
+  --orange:#ff6b35;
+  --orange-glow:rgba(255,107,53,.15);
   --emerald:#10b981;
+  --red:#ef4444;
+  --red-glow:rgba(239,68,68,.1);
   --text:#f1f5f9;
   --text-2:#94a3b8;
   --text-3:#64748b;
   --border:rgba(255,255,255,.06);
-  --border-h:rgba(124,58,237,.25);
+  --border-h:rgba(102,126,234,.25);
   --r:16px;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{font-family:'Plus Jakarta Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
 .w{max-width:1200px;margin:0 auto;padding:0 28px}
-
-/* KEYFRAMES */
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes glow-pulse{0%,100%{box-shadow:0 0 20px rgba(245,158,11,.25)}50%{box-shadow:0 0 50px rgba(245,158,11,.4)}}
+@keyframes glow-pulse{0%,100%{box-shadow:0 0 20px rgba(255,107,53,.25)}50%{box-shadow:0 0 50px rgba(255,107,53,.45)}}
 @keyframes ring{0%{transform:scale(.85);opacity:1}100%{transform:scale(2.4);opacity:0}}
-@keyframes slide-up{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
-@keyframes bar-grow{from{width:0}to{width:100%}}
+@keyframes count{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
 .reveal{opacity:0;transform:translateY(40px);transition:all .7s cubic-bezier(.16,1,.3,1)}.reveal.vis{opacity:1;transform:none}
 
 /* NAV */
@@ -45,218 +46,195 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:14px 0;transition:al
 nav.sc{background:rgba(6,6,9,.92);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
 nav .w{display:flex;justify-content:space-between;align-items:center}
 .logo{display:flex;align-items:center;gap:12px;text-decoration:none}
-.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--gold),#d97706);border-radius:11px;display:flex;align-items:center;justify-content:center}
-.logo-icon svg{width:22px;height:22px;fill:#000}
+.logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--accent),var(--purple));border-radius:11px;display:flex;align-items:center;justify-content:center}
+.logo-icon svg{width:22px;height:22px;fill:#fff}
 .logo-name{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:17px;color:var(--text);line-height:1.2}
-.logo-name span{color:var(--gold-light);display:block;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
+.logo-name span{color:var(--accent-light);display:block;font-size:11px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600}
 .nav-r{display:flex;gap:28px;align-items:center}
 .nav-r a{color:var(--text-2);text-decoration:none;font-size:14px;font-weight:500;transition:color .25s}
 .nav-r a:hover{color:var(--text)}
-.nav-cta{background:linear-gradient(135deg,var(--gold),#d97706)!important;color:#000!important;padding:10px 22px;border-radius:10px;font-weight:700!important;font-size:13px!important;transition:all .3s!important;letter-spacing:.3px}
-.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(245,158,11,.3)}
+.nav-cta{background:linear-gradient(135deg,var(--orange),#e05520)!important;color:#fff!important;padding:10px 22px;border-radius:10px;font-weight:700!important;font-size:13px!important;transition:all .3s!important}
+.nav-cta:hover{transform:translateY(-1px);box-shadow:0 4px 20px rgba(255,107,53,.35)}
 
 /* HERO */
-.hero{padding:160px 0 100px;position:relative;overflow:hidden}
-.hero::before{content:'';position:absolute;top:-40%;left:10%;width:80%;height:180%;background:radial-gradient(ellipse at 40% 40%,rgba(124,58,237,.07),transparent 60%),radial-gradient(ellipse at 65% 60%,rgba(245,158,11,.05),transparent 55%);pointer-events:none}
-.hero .w{position:relative;z-index:1;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
-.h-left{max-width:600px}
-.h-badge{display:inline-flex;align-items:center;gap:8px;background:var(--gold-glow);border:1px solid rgba(245,158,11,.2);color:var(--gold-light);padding:7px 16px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:.4px;margin-bottom:24px;text-transform:uppercase}
-.h-badge i{width:6px;height:6px;background:var(--gold);border-radius:50%;display:inline-block;position:relative}
-.h-badge i::after{content:'';position:absolute;inset:-3px;border:2px solid var(--gold);border-radius:50%;animation:ring 1.8s infinite}
-.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(34px,4.8vw,58px);font-weight:700;line-height:1.08;margin-bottom:20px;letter-spacing:-.03em}
-.hero h1 em{font-style:normal;background:linear-gradient(135deg,var(--gold-light),var(--accent-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.h-sub{font-size:18px;color:var(--text-2);line-height:1.7;margin-bottom:36px;max-width:500px}
-.h-actions{display:flex;gap:14px;flex-wrap:wrap}
+.hero{padding:150px 0 100px;position:relative;overflow:hidden;text-align:center}
+.hero::before{content:'';position:absolute;top:-40%;left:10%;width:80%;height:180%;background:radial-gradient(ellipse at 50% 40%,rgba(102,126,234,.08),transparent 60%),radial-gradient(ellipse at 30% 60%,rgba(239,68,68,.04),transparent 50%);pointer-events:none}
+.hero .w{position:relative;z-index:1}
+.h-badge{display:inline-flex;align-items:center;gap:8px;background:var(--red-glow);border:1px solid rgba(239,68,68,.2);color:#f87171;padding:7px 16px;border-radius:50px;font-size:12px;font-weight:600;letter-spacing:.4px;margin-bottom:24px;text-transform:uppercase}
+.h-badge i{width:6px;height:6px;background:var(--red);border-radius:50%;display:inline-block;position:relative}
+.h-badge i::after{content:'';position:absolute;inset:-3px;border:2px solid var(--red);border-radius:50%;animation:ring 1.8s infinite}
+.hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(36px,5.5vw,64px);font-weight:700;line-height:1.05;margin-bottom:20px;letter-spacing:-.03em;max-width:900px;margin-left:auto;margin-right:auto}
+.hero h1 em{font-style:normal;color:var(--gold-light)}
+.h-sub{font-size:19px;color:var(--text-2);line-height:1.7;margin-bottom:40px;max-width:640px;margin-left:auto;margin-right:auto}
+.h-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 36px;border-radius:13px;font-size:16px;font-weight:700;text-decoration:none;transition:all .3s;border:none;cursor:pointer}
-.btn-gold{background:linear-gradient(135deg,var(--gold),#d97706);color:#000;box-shadow:0 4px 28px rgba(245,158,11,.3)}
-.btn-gold:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(245,158,11,.4)}
-.btn-purple{background:linear-gradient(135deg,var(--accent),#6d28d9);color:#fff;box-shadow:0 4px 24px rgba(124,58,237,.3)}
-.btn-purple:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(124,58,237,.4)}
-.btn-call{background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);color:var(--gold-light);position:relative;padding-left:48px}
-.btn-call::before{content:'';position:absolute;left:20px;width:10px;height:10px;background:var(--gold);border-radius:50%}
-.btn-call::after{content:'';position:absolute;left:16px;width:18px;height:18px;border:2px solid var(--gold);border-radius:50%;animation:ring 1.6s infinite}
-.btn-call:hover{background:rgba(245,158,11,.12);border-color:rgba(245,158,11,.4);transform:translateY(-2px)}
-.h-proof{display:flex;gap:36px;margin-top:44px;flex-wrap:wrap}
-.h-proof-i{display:flex;flex-direction:column}
-.h-proof-i b{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;background:linear-gradient(135deg,var(--gold-light),var(--accent-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.h-proof-i span{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+.btn-orange{background:linear-gradient(135deg,var(--orange),#e05520);color:#fff;box-shadow:0 4px 28px rgba(255,107,53,.35)}
+.btn-orange:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(255,107,53,.45)}
+.btn-call{background:rgba(102,126,234,.1);border:1px solid rgba(102,126,234,.25);color:var(--accent-light);position:relative;padding-left:48px}
+.btn-call::before{content:'';position:absolute;left:20px;width:10px;height:10px;background:var(--accent-light);border-radius:50%}
+.btn-call::after{content:'';position:absolute;left:16px;width:18px;height:18px;border:2px solid var(--accent-light);border-radius:50%;animation:ring 1.6s infinite}
+.btn-call:hover{background:rgba(102,126,234,.15);border-color:rgba(102,126,234,.4);transform:translateY(-2px)}
+.btn-test{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);color:var(--text)}
+.btn-test:hover{background:rgba(255,255,255,.1);transform:translateY(-2px)}
 
-/* HERO CARD */
-.h-right{display:flex;justify-content:center}
-.h-card{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:28px;width:100%;max-width:420px;box-shadow:0 32px 80px rgba(0,0,0,.5);animation:float 7s ease-in-out infinite}
-.h-card-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
-.h-card-top h4{font-size:14px;font-weight:700;display:flex;align-items:center;gap:8px}
-.live{display:inline-flex;align-items:center;gap:5px;background:rgba(16,185,129,.1);color:var(--emerald);padding:5px 12px;border-radius:50px;font-size:10px;font-weight:600;letter-spacing:.3px}
-.live::before{content:'';width:6px;height:6px;background:var(--emerald);border-radius:50%;animation:ring 2s infinite}
-.h-card-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
-.mc{background:rgba(255,255,255,.025);border:1px solid var(--border);border-radius:11px;padding:14px;text-align:center}
-.mc b{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;display:block}
-.mc b.p{color:var(--accent-light)}.mc b.g{color:var(--emerald)}.mc b.y{color:var(--gold-light)}
-.mc small{font-size:10px;color:var(--text-3);text-transform:uppercase;letter-spacing:.5px}
-.lead-row{display:flex;justify-content:space-between;align-items:center;padding:11px 14px;background:rgba(255,255,255,.015);border:1px solid var(--border);border-radius:10px;font-size:12px;margin-bottom:8px}
-.lead-row .ln{font-weight:600;color:var(--text)}
-.lead-row .lr{color:var(--text-3);font-size:10px}
-.pill{padding:3px 10px;border-radius:50px;font-size:9px;font-weight:700;letter-spacing:.3px}
-.pill.bk{background:rgba(16,185,129,.1);color:var(--emerald)}
-.pill.wm{background:rgba(245,158,11,.1);color:var(--gold)}
-.pill.nr{background:rgba(124,58,237,.1);color:var(--accent-light)}
-
-/* TRUST */
-.trust{padding:52px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.trust .w{display:flex;justify-content:center;gap:56px;flex-wrap:wrap}
-.trust-i{text-align:center}
-.trust-i b{font-family:'Space Grotesk',sans-serif;display:block;font-size:34px;font-weight:700;background:linear-gradient(135deg,var(--gold-light),var(--accent-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.trust-i span{font-size:11px;color:var(--text-3);text-transform:uppercase;letter-spacing:.6px}
+/* STATS BAR */
+.stats{padding:56px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.stats .w{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.stat b{font-family:'Space Grotesk',sans-serif;display:block;font-size:clamp(28px,3.5vw,42px);font-weight:700;margin-bottom:4px}
+.stat b.red{color:#f87171}
+.stat b.gold{color:var(--gold-light)}
+.stat b.accent{color:var(--accent-light)}
+.stat span{font-size:12px;color:var(--text-3);text-transform:uppercase;letter-spacing:.6px}
 
 /* SECTION HEADER */
 .sh{text-align:center;margin-bottom:60px}
-.sh-tag{display:inline-block;font-size:11px;font-weight:700;color:var(--gold-light);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
+.sh-tag{display:inline-block;font-size:11px;font-weight:700;color:var(--accent-light);text-transform:uppercase;letter-spacing:2px;margin-bottom:14px}
 .sh-title{font-family:'Space Grotesk',sans-serif;font-size:clamp(28px,3.5vw,46px);font-weight:700;line-height:1.12;margin-bottom:14px;letter-spacing:-.02em}
 .sh-sub{font-size:17px;color:var(--text-2);max-width:580px;margin:0 auto;line-height:1.7}
 
-/* WHAT YOU GET */
-.perks{padding:100px 0}
-.perks-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.perk{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:32px;transition:all .4s;position:relative;overflow:hidden}
-.perk::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--accent));opacity:0;transition:opacity .3s}
-.perk:hover{border-color:var(--border-h);transform:translateY(-4px);box-shadow:0 16px 48px rgba(124,58,237,.08)}
-.perk:hover::after{opacity:1}
-.perk-icon{width:52px;height:52px;background:var(--gold-glow);border:1px solid rgba(245,158,11,.15);border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
-.perk h3{font-size:17px;font-weight:700;margin-bottom:8px}
-.perk p{font-size:13px;color:var(--text-2);line-height:1.7}
+/* MONEY CALC */
+.money{padding:100px 0}
+.money-box{background:linear-gradient(135deg,#ef4444,#dc2626);border-radius:24px;padding:56px 40px;text-align:center;max-width:800px;margin:0 auto 64px;box-shadow:0 24px 64px rgba(239,68,68,.25);position:relative;overflow:hidden}
+.money-box::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")}
+.money-box h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#fff;margin-bottom:16px;position:relative;z-index:1}
+.money-num{font-family:'Space Grotesk',sans-serif;font-size:clamp(40px,6vw,72px);font-weight:700;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,.2);position:relative;z-index:1}
+.money-box p{font-size:16px;color:rgba(255,255,255,.8);margin-top:12px;position:relative;z-index:1}
 
-/* SERVICES */
-.services{padding:100px 0;background:linear-gradient(180deg,rgba(124,58,237,.03),transparent)}
-.svc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
-.svc{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:36px;transition:all .4s;position:relative}
-.svc:hover{border-color:var(--border-h);transform:translateY(-5px);box-shadow:0 20px 60px rgba(0,0,0,.2)}
-.svc-icon{width:54px;height:54px;background:var(--accent-glow);border:1px solid rgba(124,58,237,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px}
-.svc h3{font-size:18px;font-weight:700;margin-bottom:10px}
-.svc p{font-size:14px;color:var(--text-2);line-height:1.7}
-.svc-tag{display:inline-block;margin-top:16px;padding:6px 14px;background:var(--gold-glow);border:1px solid rgba(245,158,11,.12);border-radius:8px;font-size:12px;font-weight:600;color:var(--gold-light)}
+/* PROBLEM CARDS */
+.problems{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.problem{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:36px;transition:all .4s;position:relative;overflow:hidden}
+.problem::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--red),var(--orange));opacity:0;transition:opacity .3s}
+.problem:hover{border-color:rgba(239,68,68,.2);transform:translateY(-4px);box-shadow:0 16px 48px rgba(239,68,68,.06)}
+.problem:hover::after{opacity:1}
+.problem-icon{font-size:36px;margin-bottom:16px;display:block}
+.problem h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.problem p{font-size:14px;color:var(--text-2);line-height:1.7}
 
-/* HOW IT WORKS */
-.hiw{padding:100px 0}
-.hiw-flow{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;position:relative}
-.hiw-flow::before{content:'';position:absolute;top:52px;left:calc(12.5% + 20px);right:calc(12.5% + 20px);height:2px;background:linear-gradient(90deg,var(--accent)33,var(--gold)66,var(--accent));opacity:.2}
-.hiw-step{text-align:center;position:relative}
-.hiw-num{width:104px;height:104px;margin:0 auto 24px;background:var(--bg-card);border:2px solid var(--border);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;color:var(--gold-light);z-index:1;position:relative;transition:all .3s}
-.hiw-step:hover .hiw-num{border-color:var(--gold);box-shadow:0 0 40px var(--gold-glow)}
-.hiw-step h3{font-size:16px;font-weight:700;margin-bottom:8px}
-.hiw-step p{font-size:13px;color:var(--text-2);line-height:1.6;max-width:220px;margin:0 auto}
+/* SOLUTION */
+.solution{padding:100px 0;background:linear-gradient(180deg,rgba(102,126,234,.03),transparent)}
+.sol-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.sol{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:36px;transition:all .4s;position:relative;overflow:hidden}
+.sol::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--purple));opacity:0;transition:opacity .3s}
+.sol:hover{border-color:var(--border-h);transform:translateY(-5px);box-shadow:0 20px 60px rgba(102,126,234,.08)}
+.sol:hover::after{opacity:1}
+.sol-icon{width:54px;height:54px;background:var(--accent-glow);border:1px solid rgba(102,126,234,.2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:20px}
+.sol h3{font-size:18px;font-weight:700;margin-bottom:10px}
+.sol p{font-size:14px;color:var(--text-2);line-height:1.7}
 
-/* VOICE SECTION */
+/* GUARANTEE */
+.guar-box{background:linear-gradient(135deg,#10b981,#059669);border-radius:20px;padding:44px;text-align:center;max-width:800px;margin:48px auto 0;position:relative;overflow:hidden}
+.guar-box h3{font-family:'Space Grotesk',sans-serif;font-size:clamp(20px,2.5vw,28px);font-weight:700;color:#fff;margin-bottom:12px}
+.guar-box p{font-size:16px;color:rgba(255,255,255,.9);max-width:500px;margin:0 auto}
+
+/* VOICE */
 .voice{padding:100px 0}
 .voice-box{background:linear-gradient(135deg,var(--bg-card),#110a1f);border:1px solid var(--border);border-radius:24px;padding:64px;display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;overflow:hidden}
-.voice-box::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(245,158,11,.05),transparent 60%);pointer-events:none}
+.voice-box::before{content:'';position:absolute;top:-50%;right:-20%;width:60%;height:200%;background:radial-gradient(ellipse,rgba(102,126,234,.06),transparent 60%);pointer-events:none}
 .v-left{position:relative;z-index:1}
 .v-left h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3vw,40px);font-weight:700;margin-bottom:14px;line-height:1.15}
 .v-left p{font-size:16px;color:var(--text-2);line-height:1.7;margin-bottom:28px}
 .v-feats{display:flex;flex-direction:column;gap:10px;margin-bottom:32px}
 .v-feat{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--text-2)}
 .v-feat::before{content:'';width:18px;height:18px;min-width:18px;background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.25);border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' fill='%2310b981' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
-.call-btn{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--gold),#d97706);color:#000;padding:18px 40px;border-radius:14px;font-size:17px;font-weight:800;text-decoration:none;transition:all .3s;box-shadow:0 4px 28px rgba(245,158,11,.3);animation:glow-pulse 3s ease-in-out infinite;border:none;cursor:pointer;letter-spacing:.2px}
-.call-btn:hover{transform:translateY(-2px);box-shadow:0 8px 44px rgba(245,158,11,.45)}
-.call-btn svg{width:22px;height:22px;fill:#000}
+.call-btn{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(135deg,var(--orange),#e05520);color:#fff;padding:18px 40px;border-radius:14px;font-size:17px;font-weight:800;text-decoration:none;transition:all .3s;box-shadow:0 4px 28px rgba(255,107,53,.3);animation:glow-pulse 3s ease-in-out infinite;border:none;cursor:pointer}
+.call-btn:hover{transform:translateY(-2px);box-shadow:0 8px 44px rgba(255,107,53,.45)}
+.call-btn svg{width:22px;height:22px;fill:#fff}
 .v-right{display:flex;justify-content:center;align-items:center;position:relative;z-index:1}
-.orb{width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.12),rgba(124,58,237,.06) 50%,transparent 70%);display:flex;align-items:center;justify-content:center;position:relative}
-.orb::before{content:'';position:absolute;inset:24px;border-radius:50%;border:1.5px solid rgba(245,158,11,.15);animation:ring 3.5s infinite}
-.orb::after{content:'';position:absolute;inset:48px;border-radius:50%;border:1.5px solid rgba(124,58,237,.12);animation:ring 3.5s infinite .6s}
-.orb-core{width:120px;height:120px;background:linear-gradient(135deg,var(--gold),var(--accent));border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(245,158,11,.25)}
+.orb{width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(102,126,234,.12),rgba(118,75,162,.06) 50%,transparent 70%);display:flex;align-items:center;justify-content:center;position:relative}
+.orb::before{content:'';position:absolute;inset:24px;border-radius:50%;border:1.5px solid rgba(102,126,234,.15);animation:ring 3.5s infinite}
+.orb::after{content:'';position:absolute;inset:48px;border-radius:50%;border:1.5px solid rgba(118,75,162,.12);animation:ring 3.5s infinite .6s}
+.orb-core{width:120px;height:120px;background:linear-gradient(135deg,var(--accent),var(--purple));border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 0 60px rgba(102,126,234,.3)}
 .orb-core svg{width:48px;height:48px;fill:#fff}
 
+/* PRICING */
+.pricing{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(102,126,234,.02))}
+.price-card{max-width:480px;margin:0 auto;background:var(--bg-card);border:2px solid var(--accent);border-radius:24px;padding:52px 44px;text-align:center;position:relative;box-shadow:0 24px 64px rgba(102,126,234,.12)}
+.price-badge{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--accent),var(--purple));color:#fff;padding:8px 28px;border-radius:50px;font-size:13px;font-weight:700;letter-spacing:.3px;white-space:nowrap}
+.price-card h3{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;margin-bottom:8px;margin-top:12px}
+.price-amt{font-family:'Space Grotesk',sans-serif;font-size:clamp(48px,6vw,64px);font-weight:700;background:linear-gradient(135deg,var(--accent-light),var(--gold-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin:20px 0 8px}
+.price-period{font-size:16px;color:var(--text-3);margin-bottom:32px}
+.price-features{text-align:left;margin-bottom:36px;display:flex;flex-direction:column;gap:14px}
+.pf{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--text-2)}
+.pf::before{content:'';width:20px;height:20px;min-width:20px;background:rgba(16,185,129,.12);border:1px solid rgba(16,185,129,.25);border-radius:50%;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='11' fill='%2310b981' viewBox='0 0 16 16'%3E%3Cpath d='M13.854 3.646a.5.5 0 010 .708l-7 7a.5.5 0 01-.708 0l-3.5-3.5a.5.5 0 11.708-.708L6.5 10.293l6.646-6.647a.5.5 0 01.708 0z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:center}
+.price-card .btn{width:100%;justify-content:center;margin-bottom:14px}
+.price-card .fine{font-size:13px;color:var(--text-3)}
+
 /* TEAM */
-.team{padding:100px 0;background:linear-gradient(180deg,transparent,rgba(245,158,11,.02))}
+.team{padding:100px 0}
 .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px}
 .tm{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:40px;text-align:center;transition:all .4s}
 .tm:hover{border-color:var(--border-h);transform:translateY(-4px)}
 .tm-av{width:96px;height:96px;border-radius:50%;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;font-family:'Space Grotesk',sans-serif;font-size:32px;font-weight:800;color:#fff}
-.tm-av.s{background:linear-gradient(135deg,var(--accent),#6d28d9)}
-.tm-av.a{background:linear-gradient(135deg,var(--gold),#d97706)}
+.tm-av.s{background:linear-gradient(135deg,var(--accent),#4f46e5)}
+.tm-av.a{background:linear-gradient(135deg,var(--purple),#9333ea)}
 .tm h3{font-size:20px;font-weight:700;margin-bottom:4px}
-.tm-role{font-size:13px;color:var(--gold-light);font-weight:600;margin-bottom:14px}
+.tm-role{font-size:13px;color:var(--accent-light);font-weight:600;margin-bottom:14px}
 .tm p{font-size:14px;color:var(--text-2);line-height:1.7}
 
-/* COMPARE */
-.compare{padding:100px 0}
-.cmp{max-width:800px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);overflow:hidden}
-.cmp table{width:100%;border-collapse:collapse}
-.cmp th{padding:18px 24px;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.6px}
-.cmp th:first-child{text-align:left;color:var(--text-3);background:rgba(255,255,255,.015)}
-.cmp th:nth-child(2){text-align:center;color:#ef4444;background:rgba(239,68,68,.04)}
-.cmp th:nth-child(3){text-align:center;color:var(--gold-light);background:var(--gold-glow)}
-.cmp td{padding:15px 24px;font-size:14px;border-top:1px solid var(--border)}
-.cmp td:first-child{color:var(--text);font-weight:500}
-.cmp td:nth-child(2){text-align:center;color:#f87171}
-.cmp td:nth-child(3){text-align:center;color:var(--emerald);font-weight:600;background:rgba(245,158,11,.02)}
-
 /* TESTIMONIALS */
-.tests{padding:100px 0}
+.tests{padding:100px 0;background:linear-gradient(180deg,rgba(102,126,234,.03),transparent)}
 .test-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px}
-.tc{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:32px;transition:all .3s}
+.tc{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:32px;border-left:3px solid var(--accent);transition:all .3s}
 .tc:hover{border-color:var(--border-h)}
 .tc-stars{color:var(--gold);font-size:15px;margin-bottom:14px;letter-spacing:2px}
 .tc-q{font-size:15px;color:var(--text-2);line-height:1.7;margin-bottom:20px;font-style:italic}
 .tc-a{display:flex;align-items:center;gap:12px}
-.tc-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--gold));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px}
+.tc-av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--purple));display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:13px}
 .tc-n{font-size:14px;font-weight:700}.tc-r{font-size:11px;color:var(--text-3)}
 
-/* ROI */
-.roi{padding:100px 0}
-.roi-box{max-width:820px;margin:0 auto;background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:48px;position:relative;overflow:hidden}
-.roi-box::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--accent))}
-.roi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.roi-i{text-align:center;padding:22px 10px;background:rgba(255,255,255,.015);border:1px solid var(--border);border-radius:14px}
-.roi-n{font-family:'Space Grotesk',sans-serif;font-size:clamp(26px,3vw,38px);font-weight:700;background:linear-gradient(135deg,var(--gold-light),var(--accent-light));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:block}
-.roi-l{font-size:11px;color:var(--text-3);margin-top:4px;display:block}
-.roi-f{text-align:center;margin-top:28px;font-size:14px;color:var(--text-2)}
-.roi-f strong{color:var(--emerald)}
-
 /* FAQ */
-.faq{padding:100px 0;background:linear-gradient(180deg,rgba(124,58,237,.02),transparent)}
+.faq{padding:100px 0}
 .faq-list{max-width:720px;margin:0 auto}
 details.fq{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;margin-bottom:10px;overflow:hidden;transition:border-color .3s}
 details.fq:hover,details.fq[open]{border-color:var(--border-h)}
 details.fq summary{padding:20px 28px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}
 details.fq summary::-webkit-details-marker{display:none}
-details.fq summary::after{content:'+';font-size:20px;color:var(--gold-light);font-weight:500;transition:transform .3s;min-width:18px;text-align:center}
+details.fq summary::after{content:'+';font-size:20px;color:var(--accent-light);font-weight:500;transition:transform .3s;min-width:18px;text-align:center}
 details.fq[open] summary::after{transform:rotate(45deg)}
 details.fq p{padding:0 28px 20px;font-size:14px;color:var(--text-2);line-height:1.7}
 
-/* FINAL CTA */
+/* CTA */
 .cta-end{padding:120px 0;text-align:center;position:relative}
-.cta-end::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(245,158,11,.06),transparent 65%);pointer-events:none}
+.cta-end::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(102,126,234,.08),transparent 65%);pointer-events:none}
 .cta-end .w{position:relative;z-index:1}
 .cta-end h2{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4.2vw,52px);font-weight:700;margin-bottom:16px;line-height:1.1;letter-spacing:-.02em}
 .cta-end p{font-size:18px;color:var(--text-2);max-width:520px;margin:0 auto 40px;line-height:1.7}
 .cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.guar{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:24px;font-size:12px;color:var(--text-3)}
+.demo-box{background:rgba(102,126,234,.08);border:1px solid rgba(102,126,234,.2);border-radius:20px;padding:36px;max-width:500px;margin:40px auto;backdrop-filter:blur(8px)}
+.demo-phone{font-family:'Space Grotesk',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:700;color:var(--accent-light);margin:12px 0}
+.guar{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:20px;font-size:12px;color:var(--text-3)}
 .guar svg{width:14px;height:14px;fill:var(--emerald)}
 
-/* FOOTER */
 footer{padding:44px 0;border-top:1px solid var(--border);text-align:center}
 footer p{font-size:12px;color:var(--text-3)}
 .f-links{display:flex;justify-content:center;gap:24px;margin-bottom:14px}
 .f-links a{color:var(--text-2);text-decoration:none;font-size:12px;transition:color .3s}
 .f-links a:hover{color:var(--text)}
 
-/* RESPONSIVE */
+/* MODAL */
+.modal-bg{position:fixed;inset:0;background:rgba(0,0,0,.8);display:flex;justify-content:center;align-items:center;z-index:9999;opacity:0;pointer-events:none;transition:opacity .3s}
+.modal-bg.open{opacity:1;pointer-events:all}
+.modal{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;max-width:500px;width:92%;padding:44px;text-align:center;transform:scale(.9);transition:transform .3s}
+.modal-bg.open .modal{transform:scale(1)}
+.modal h3{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;margin-bottom:16px}
+.modal-demo{background:linear-gradient(135deg,var(--accent),var(--purple));border-radius:14px;padding:24px;margin:20px 0;color:#fff}
+.modal-demo .num{font-family:'Space Grotesk',sans-serif;font-size:28px;font-weight:700;margin:8px 0}
+.modal-features{background:rgba(102,126,234,.06);border:1px solid rgba(102,126,234,.15);border-radius:12px;padding:20px;margin:20px 0;text-align:left}
+.modal-features div{color:var(--text-2);font-size:14px;line-height:2}
+.modal-close{background:var(--accent);color:#fff;border:none;padding:12px 28px;border-radius:10px;font-weight:600;cursor:pointer;font-size:14px;margin-top:8px;transition:all .3s}
+.modal-close:hover{background:var(--accent-light)}
+
 @media(max-width:960px){
-  .hero .w{grid-template-columns:1fr;text-align:center}
-  .h-left{max-width:100%}.h-sub{margin-left:auto;margin-right:auto}
-  .h-actions{justify-content:center}.h-proof{justify-content:center}
-  .h-right{margin-top:32px}
-  .hiw-flow{grid-template-columns:1fr 1fr}.hiw-flow::before{display:none}
+  .stats .w{grid-template-columns:1fr 1fr}
   .voice-box{grid-template-columns:1fr;text-align:center;padding:44px}
   .v-left p,.v-feats{text-align:left}
   .nav-r{display:none}
 }
 @media(max-width:600px){
   .hero{padding:130px 0 80px}
-  .hiw-flow{grid-template-columns:1fr}
-  .trust .w{gap:28px}
-  .roi-grid{grid-template-columns:1fr 1fr}
-  .h-card-grid{grid-template-columns:1fr}
+  .stats .w{grid-template-columns:1fr 1fr}
+  .h-actions{flex-direction:column;align-items:stretch}
+  .price-card{padding:40px 28px}
 }
 </style>
 </head>
@@ -266,17 +244,15 @@ footer p{font-size:12px;color:var(--text-3)}
 <nav id="nav">
   <div class="w">
     <a href="#" class="logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-      </div>
-      <div class="logo-name">Brokerage Intelligence<span>The Report</span></div>
+      <div class="logo-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+      <div class="logo-name">Brokerage Intelligence<span>AI For Real Estate</span></div>
     </a>
     <div class="nav-r">
-      <a href="#perks">Get Featured</a>
-      <a href="#services">Services</a>
-      <a href="#voice">AI Voice Demo</a>
+      <a href="#problem">The Problem</a>
+      <a href="#solution">Solution</a>
+      <a href="#pricing">Pricing</a>
       <a href="#team">Team</a>
-      <a href="tel:+15129670954" class="nav-cta">Talk to AI Now</a>
+      <a href="tel:+15129670954" class="nav-cta">Call Live Demo</a>
     </div>
   </div>
 </nav>
@@ -284,159 +260,108 @@ footer p{font-size:12px;color:var(--text-3)}
 <!-- HERO -->
 <section class="hero">
   <div class="w">
-    <div class="h-left">
-      <div class="h-badge"><i></i> Quarterly Research Publication</div>
-      <h1>Get <em>Featured</em> in the Report Top Brokers Are Reading</h1>
-      <p class="h-sub">A quarterly research publication featuring brokers who are thinking differently about AI and automation. Free publicity. Free content. Real authority.</p>
-      <div class="h-actions">
-        <a href="#cta" class="btn btn-gold">
-          Get Featured Free
-          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-        <a href="tel:+15129670954" class="btn btn-call">Talk to Our AI</a>
-      </div>
-      <div class="h-proof">
-        <div class="h-proof-i"><b>$20K+</b><span>R&D Investment</span></div>
-        <div class="h-proof-i"><b>100+</b><span>Press Outlets</span></div>
-        <div class="h-proof-i"><b>24/7</b><span>AI Running</span></div>
-      </div>
-    </div>
-    <div class="h-right">
-      <div class="h-card">
-        <div class="h-card-top">
-          <h4>
-            <svg width="14" height="14" fill="var(--gold)" viewBox="0 0 16 16"><path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/></svg>
-            Agent Dashboard
-          </h4>
-          <div class="live">AI Active</div>
-        </div>
-        <div class="h-card-grid">
-          <div class="mc"><b class="p">127</b><small>Prospects</small></div>
-          <div class="mc"><b class="g">6</b><small>Booked</small></div>
-          <div class="mc"><b class="y">84</b><small>Outreach</small></div>
-          <div class="mc"><b>31</b><small>Convos</small></div>
-        </div>
-        <div class="lead-row"><div><span class="ln">Marcus Chen</span><span class="lr"> &middot; VP, Apex Properties</span></div><span class="pill bk">Booked</span></div>
-        <div class="lead-row"><div><span class="ln">Jennifer Walsh</span><span class="lr"> &middot; Investor, 12 units</span></div><span class="pill wm">Warm</span></div>
-        <div class="lead-row"><div><span class="ln">David Okafor</span><span class="lr"> &middot; Relocating Exec</span></div><span class="pill nr">Nurture</span></div>
-      </div>
+    <div class="h-badge"><i></i> Stop Losing Money</div>
+    <h1>That Missed Call Just Cost You <em>$15,000</em></h1>
+    <p class="h-sub">Stop losing commission checks to missed calls. Our AI answers 24/7, qualifies every lead, and books appointments automatically.</p>
+    <div class="h-actions">
+      <a href="#cta" class="btn btn-orange">Get Your Free Analysis <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <button onclick="openModal()" class="btn btn-test">&#127908; Test AI Now</button>
+      <a href="tel:+15129670954" class="btn btn-call">Call Live Demo</a>
     </div>
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust">
+<!-- STATS -->
+<section class="stats">
   <div class="w">
-    <div class="trust-i"><b>2,400+</b><span>Meetings Booked</span></div>
-    <div class="trust-i"><b>47</b><span>Brokerages Served</span></div>
-    <div class="trust-i"><b>312%</b><span>Avg Client ROI</span></div>
-    <div class="trust-i"><b>&lt;2min</b><span>AI Response Time</span></div>
+    <div class="stat"><b class="red">67%</b><span>Calls After Hours</span></div>
+    <div class="stat"><b class="red">14%</b><span>Leave Voicemails</span></div>
+    <div class="stat"><b class="gold">$15K</b><span>Avg Commission Lost</span></div>
+    <div class="stat"><b class="accent">4hrs</b><span>Avg Response Time</span></div>
   </div>
 </section>
 
-<!-- WHAT FEATURED BROKERS GET -->
-<section class="perks" id="perks">
+<!-- PROBLEM -->
+<section class="money" id="problem">
   <div class="w">
     <div class="sh reveal">
-      <div class="sh-tag">What Featured Brokers Get</div>
-      <div class="sh-title">30 Minutes of Your Time. We Handle Everything Else.</div>
-      <p class="sh-sub">One research interview turns into a content machine that builds your authority on autopilot.</p>
+      <div class="sh-tag">The Problem</div>
+      <div class="sh-title">You're Bleeding Money Every Day</div>
+      <p class="sh-sub">Every missed call could be worth $15,000 in commission. You're losing deals when buyers are most motivated.</p>
     </div>
-    <div class="perks-grid">
-      <div class="perk reveal">
-        <div class="perk-icon">&#128240;</div>
-        <h3>Featured in the Publication</h3>
-        <p>Your insights published in the Brokerage Intelligence Report. Shared across LinkedIn, press outlets, and industry channels.</p>
+    <div class="money-box reveal">
+      <h3>Your Monthly Loss Calculator</h3>
+      <div class="money-num">47 x $15,000 = $705,000</div>
+      <p>What brokers lose monthly to missed opportunities</p>
+    </div>
+    <div class="problems">
+      <div class="problem reveal">
+        <span class="problem-icon">&#128348;</span>
+        <h3>67% Call After Hours</h3>
+        <p>Motivated buyers call at 8 PM browsing Zillow. Your voicemail isn't closing deals. That lead calls your competitor next.</p>
       </div>
-      <div class="perk reveal">
-        <div class="perk-icon">&#127760;</div>
-        <h3>100+ Press Outlets</h3>
-        <p>We push the publication to 100+ online newspapers and magazines. You get to say "as featured in..." on your profile.</p>
+      <div class="problem reveal">
+        <span class="problem-icon">&#128241;</span>
+        <h3>86% Don't Leave Messages</h3>
+        <p>They hang up and call the next broker. First response wins the listing. Every. Single. Time.</p>
       </div>
-      <div class="perk reveal">
-        <div class="perk-icon">&#128241;</div>
-        <h3>Daily Content — Automated</h3>
-        <p>Your interview gets auto-split into reels, clips, and carousel posts. Published to your LinkedIn daily. One interview = months of content.</p>
-      </div>
-      <div class="perk reveal">
-        <div class="perk-icon">&#129309;</div>
-        <h3>Network With Top Brokers</h3>
-        <p>You're featured alongside other forward-thinking brokers and team leaders. Instant credibility and high-value connections.</p>
-      </div>
-      <div class="perk reveal">
-        <div class="perk-icon">&#127775;</div>
-        <h3>Full Recording Access</h3>
-        <p>We send you the complete video recording. Use it on your website, social, recruiting materials — however you want.</p>
+      <div class="problem reveal">
+        <span class="problem-icon">&#9200;</span>
+        <h3>4-Hour Response Gap</h3>
+        <p>By the time you call back, they've toured 3 houses with someone else. Speed to lead is everything.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
+<!-- SOLUTION -->
+<section class="solution" id="solution">
   <div class="w">
     <div class="sh reveal">
-      <div class="sh-tag">AI Solutions for Brokerages</div>
-      <div class="sh-title">Custom AI That Fills Your Pipeline 24/7</div>
-      <p class="sh-sub">We invested $20K+ into developers and tools not on the market yet. Built specifically for real estate.</p>
+      <div class="sh-tag">The Solution</div>
+      <div class="sh-title">What If You Never Missed Another Lead?</div>
+      <p class="sh-sub">Our AI ensures every call gets answered, every lead gets qualified, every opportunity gets captured.</p>
     </div>
-    <div class="svc-grid">
-      <div class="svc reveal">
-        <div class="svc-icon">&#128222;</div>
-        <h3>AI Receptionist / VA</h3>
-        <p>Answers calls 24/7. Qualifies leads. Books appointments. Never miss a $10K-$100K deal because you were in a meeting.</p>
-        <div class="svc-tag">$300 - $1,000/mo</div>
+    <div class="sol-grid">
+      <div class="sol reveal">
+        <div class="sol-icon">&#129302;</div>
+        <h3>AI Receptionist (24/7)</h3>
+        <p>Answers in 2 rings. Sounds human. Never sick. Works holidays. Handles questions with real market knowledge.</p>
       </div>
-      <div class="svc reveal">
-        <div class="svc-icon">&#128101;</div>
-        <h3>LinkedIn Outreach System</h3>
-        <p>Automated connection requests, personalized follow-ups, appointment setting on autopilot. Maxes out your LinkedIn daily.</p>
-        <div class="svc-tag">$300 - $1,000 setup</div>
+      <div class="sol reveal">
+        <div class="sol-icon">&#127919;</div>
+        <h3>Smart Qualification</h3>
+        <p>AI scores leads 1-10, asks the right questions, identifies hot prospects and filters out tire-kickers.</p>
       </div>
-      <div class="svc reveal">
-        <div class="svc-icon">&#127919;</div>
-        <h3>Meta Ads Lead Gen</h3>
-        <p>We run the ads. You pay for ad spend. Pay per qualified appointment after month 1. No ad management fees.</p>
-        <div class="svc-tag">Ad spend + per appointment</div>
+      <div class="sol reveal">
+        <div class="sol-icon">&#128197;</div>
+        <h3>Auto Booking</h3>
+        <p>Qualified leads booked directly into your calendar with full context. You just show up and close.</p>
       </div>
-      <div class="svc reveal">
-        <div class="svc-icon">&#128640;</div>
-        <h3>Full Package</h3>
-        <p>Receptionist + LinkedIn + Ads. Complete AI growth system for serious brokers and teams who want to dominate their market.</p>
-        <div class="svc-tag">Custom build</div>
+      <div class="sol reveal">
+        <div class="sol-icon">&#128200;</div>
+        <h3>Real-Time Intel</h3>
+        <p>Market trends, competitor pricing, neighborhood insights. Your AI knows what your prospects are asking about.</p>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="hiw" id="hiw">
-  <div class="w">
-    <div class="sh reveal">
-      <div class="sh-tag">How It Works</div>
-      <div class="sh-title">Stranger to Booked Meeting in 4 Steps</div>
-      <p class="sh-sub">Your AI team handles the pipeline. You show up and close.</p>
-    </div>
-    <div class="hiw-flow">
-      <div class="hiw-step reveal"><div class="hiw-num">1</div><h3>AI Finds Prospects</h3><p>Scans LinkedIn daily using your ideal client criteria. Investors, developers, relocators.</p></div>
-      <div class="hiw-step reveal"><div class="hiw-num">2</div><h3>Personalized Outreach</h3><p>Every message unique. Reads their profile, posts, mutual connections. Feels human.</p></div>
-      <div class="hiw-step reveal"><div class="hiw-num">3</div><h3>Multi-Touch Follow-Up</h3><p>Value-first sequences. Market insights. Soft meeting asks. Handles objections.</p></div>
-      <div class="hiw-step reveal"><div class="hiw-num">4</div><h3>Booked on Calendar</h3><p>Books directly. Sends confirmation + Zoom link + day-before reminder. You just show up.</p></div>
+    <div class="guar-box reveal">
+      <h3>&#128737; Zero-Risk Guarantee</h3>
+      <p>3x your qualified appointments in 60 days or full refund + custom solution at no charge.</p>
     </div>
   </div>
 </section>
 
-<!-- VOICE -->
+<!-- VOICE DEMO -->
 <section class="voice" id="voice">
   <div class="w">
     <div class="voice-box reveal">
       <div class="v-left">
-        <div class="sh-tag">Live AI Voice Agent</div>
-        <h2>Talk to Our AI. Right Now.</h2>
-        <p>Our voice agent handles real-time calls. Natural conversation. Qualifies leads. Books meetings. Handles objections. Prospects can't tell it's AI.</p>
+        <div class="sh-tag">Live AI Demo</div>
+        <h2>Hear It For Yourself. Call Right Now.</h2>
+        <p>Our AI receptionist handles real calls in real time. Natural conversation. Smart qualification. Instant booking. Prospects can't tell it's AI.</p>
         <div class="v-feats">
           <div class="v-feat">Answers in under 2 seconds</div>
-          <div class="v-feat">Natural conversation — not a phone tree</div>
+          <div class="v-feat">Sounds human — not a phone tree</div>
           <div class="v-feat">Qualifies leads with smart questions</div>
           <div class="v-feat">Books directly on your calendar</div>
           <div class="v-feat">24/7/365 — never takes a day off</div>
@@ -457,51 +382,52 @@ footer p{font-size:12px;color:var(--text-3)}
   </div>
 </section>
 
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div class="w">
+    <div class="sh reveal">
+      <div class="sh-tag">Investment</div>
+      <div class="sh-title">Stop Missing $15K Commission Checks</div>
+    </div>
+    <div class="price-card reveal">
+      <div class="price-badge">Most Popular</div>
+      <h3>Brokerage Intelligence System</h3>
+      <div class="price-amt">$497</div>
+      <div class="price-period">/month &middot; Setup included &middot; 60-day guarantee</div>
+      <div class="price-features">
+        <div class="pf">24/7 AI receptionist (sounds human)</div>
+        <div class="pf">Smart lead qualification & scoring</div>
+        <div class="pf">Automatic appointment booking</div>
+        <div class="pf">Custom market intelligence</div>
+        <div class="pf">Performance dashboard</div>
+        <div class="pf">Unlimited call volume</div>
+      </div>
+      <a href="#cta" class="btn btn-orange">Start Free Analysis</a>
+      <p class="fine">3x qualified appointments or full refund</p>
+    </div>
+  </div>
+</section>
+
 <!-- TEAM -->
 <section class="team" id="team">
   <div class="w">
     <div class="sh reveal">
       <div class="sh-tag">Your Growth Partners</div>
-      <div class="sh-title">Real People. Real Investment. Real Results.</div>
-      <p class="sh-sub">We put $20K+ of our own money into building AI tools specifically for real estate brokerages. We eat our own cooking.</p>
+      <div class="sh-title">Real People. Real Results.</div>
     </div>
     <div class="team-grid">
       <div class="tm reveal">
         <div class="tm-av s">SJ</div>
         <h3>Sam Jacobs</h3>
         <div class="tm-role">Growth Partner</div>
-        <p>Connects with brokers and team leaders who think differently about growth. Runs research interviews and builds partnerships that deliver real results.</p>
+        <p>Works directly with brokers to audit their lead flow, identify revenue leaks, and deploy AI systems that turn missed calls into closed deals.</p>
       </div>
       <div class="tm reveal">
         <div class="tm-av a">A</div>
         <h3>Alberto</h3>
         <div class="tm-role">Growth Partner</div>
-        <p>Identifies what's holding brokerages back and matches them with the right AI solutions. From LinkedIn outreach to full system builds — he gets it done.</p>
+        <p>Specializes in building custom AI receptionist systems for brokerages. From setup to optimization — he makes sure your phones never go unanswered.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- COMPARE -->
-<section class="compare">
-  <div class="w">
-    <div class="sh reveal">
-      <div class="sh-tag">The Difference</div>
-      <div class="sh-title">Old Way vs. AI-Powered</div>
-    </div>
-    <div class="cmp reveal">
-      <table>
-        <thead><tr><th></th><th>Traditional</th><th>With Our AI</th></tr></thead>
-        <tbody>
-          <tr><td>Hours/week prospecting</td><td>15-25</td><td>0 (automated)</td></tr>
-          <tr><td>Prospects/day</td><td>10-20</td><td>80-120</td></tr>
-          <tr><td>Personalization</td><td>Templates</td><td>Unique per person</td></tr>
-          <tr><td>Follow-up consistency</td><td>Drops after 1-2</td><td>5-touch every time</td></tr>
-          <tr><td>Lead response time</td><td>Hours-days</td><td>Under 2 min</td></tr>
-          <tr><td>Cost vs SDR</td><td>$50-70K/yr</td><td>Fraction of cost</td></tr>
-          <tr><td>Weekends/holidays</td><td>No</td><td>24/7/365</td></tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </section>
@@ -516,38 +442,19 @@ footer p{font-size:12px;color:var(--text-3)}
     <div class="test-grid">
       <div class="tc reveal">
         <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="tc-q">"Went from 3 hours a day on LinkedIn to zero. AI booked 11 meetings first week. Two turned into listings. Pays for itself 10x."</p>
-        <div class="tc-a"><div class="tc-av">SM</div><div><div class="tc-n">Sarah M.</div><div class="tc-r">Luxury Residential, Miami</div></div></div>
+        <p class="tc-q">"Went from missing 40% of calls to answering 100%. Booked $2.1M in listings in 90 days. The AI qualification is better than my best agent."</p>
+        <div class="tc-a"><div class="tc-av">SC</div><div><div class="tc-n">Sarah C.</div><div class="tc-r">RE/MAX Elite, Austin</div></div></div>
       </div>
       <div class="tc reveal">
         <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="tc-q">"The voice agent is unreal. Warm lead got a call, had a full conversation about investment goals, booked a meeting. They had no idea it was AI."</p>
-        <div class="tc-a"><div class="tc-av">JR</div><div><div class="tc-n">James R.</div><div class="tc-r">Commercial Broker, Dallas</div></div></div>
+        <p class="tc-q">"AI found 67 hot prospects we missed. Generated $890K in closed deals. Can't believe we waited this long."</p>
+        <div class="tc-a"><div class="tc-av">MR</div><div><div class="tc-n">Marcus R.</div><div class="tc-r">Century 21, Phoenix</div></div></div>
       </div>
       <div class="tc reveal">
         <div class="tc-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="tc-q">"I was skeptical. But the messages are better than my last two SDRs. My calendar has never been this full."</p>
-        <div class="tc-a"><div class="tc-av">KP</div><div><div class="tc-n">Karen P.</div><div class="tc-r">Team Lead, 8-Agent Brokerage</div></div></div>
+        <p class="tc-q">"Show-rate increased from 34% to 87%. AI qualifies better than our best agent. ROI was there in the first month."</p>
+        <div class="tc-a"><div class="tc-av">LK</div><div><div class="tc-n">Lisa K.</div><div class="tc-r">Coldwell Banker, Miami</div></div></div>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ROI -->
-<section class="roi">
-  <div class="w">
-    <div class="sh reveal">
-      <div class="sh-tag">The Math</div>
-      <div class="sh-title">What One Extra Deal a Month Is Worth</div>
-    </div>
-    <div class="roi-box reveal">
-      <div class="roi-grid">
-        <div class="roi-i"><span class="roi-n">80-120</span><span class="roi-l">Prospects/day</span></div>
-        <div class="roi-i"><span class="roi-n">12-18</span><span class="roi-l">Meetings/mo</span></div>
-        <div class="roi-i"><span class="roi-n">3-5</span><span class="roi-l">Clients/mo</span></div>
-        <div class="roi-i"><span class="roi-n">$30K+</span><span class="roi-l">Added commission</span></div>
-      </div>
-      <p class="roi-f">Based on avg broker commission of $8-12K per transaction.<br><strong>Your AI costs less than one dinner with a client.</strong></p>
     </div>
   </div>
 </section>
@@ -557,66 +464,86 @@ footer p{font-size:12px;color:var(--text-3)}
   <div class="w">
     <div class="sh reveal">
       <div class="sh-tag">Questions</div>
-      <div class="sh-title">Common Questions</div>
+      <div class="sh-title">Frequently Asked Questions</div>
     </div>
     <div class="faq-list">
-      <details class="fq reveal"><summary>What's the research publication about?</summary><p>We're launching a quarterly publication featuring top brokers who are thinking differently about AI and automation in real estate. You get featured, tagged on LinkedIn, pushed through 100+ press outlets, and receive daily content auto-created from your interview. It's 30 minutes. We handle everything else.</p></details>
-      <details class="fq reveal"><summary>Is there a cost to be featured?</summary><p>Being featured in the publication is completely free. We get market research and relationships. You get free publicity, press coverage, and content. Win-win.</p></details>
-      <details class="fq reveal"><summary>How does the AI voice agent work?</summary><p>When a lead is warm, the AI calls them directly using a natural voice. It qualifies leads, handles objections, and books meetings on your calendar — all in real time. Call (512) 967-0954 to try it yourself right now.</p></details>
-      <details class="fq reveal"><summary>Will LinkedIn flag my account?</summary><p>No. Our AI operates within LinkedIn's daily limits and mimics natural behavior. Thousands of connections processed without a single restriction. We also warm up newer accounts.</p></details>
-      <details class="fq reveal"><summary>How fast will I see results?</summary><p>Most brokers see their first booked meeting within 5-7 days. By week 3, the system is optimized and meetings come consistently. The AI learns what messaging works best for your market.</p></details>
-      <details class="fq reveal"><summary>What about pricing for AI services?</summary><p>We partner with you and hit your goals together. If we're not hitting our numbers, we work for free until we do. Book a call and we'll put together a custom plan based on your needs.</p></details>
+      <details class="fq reveal"><summary>How long before I see results?</summary><p>Most brokers see 40%+ increase in qualified appointments within 14 days. Full optimization takes 30-45 days. By week 3, appointments are flowing consistently.</p></details>
+      <details class="fq reveal"><summary>What if it doesn't work for my market?</summary><p>We customize for your local market. If you don't get 3x ROI in 60 days, you get a full refund. No fine print, no catches.</p></details>
+      <details class="fq reveal"><summary>Do I need technical skills?</summary><p>Zero tech skills needed. We handle setup, training, and ongoing optimization. You just answer qualified calls and close deals.</p></details>
+      <details class="fq reveal"><summary>How does it compare to hiring staff?</summary><p>Full-time receptionist: $4,000/month + benefits, sick days, turnover. Our AI: $497/month, 24/7, never sick, never quits, gets smarter over time.</p></details>
+      <details class="fq reveal"><summary>Can I try it before buying?</summary><p>Call (512) 967-0954 right now and talk to the AI yourself. Experience exactly what your callers will experience.</p></details>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- CTA -->
 <section class="cta-end" id="cta">
   <div class="w">
-    <h2>Stop Chasing Leads.<br>Start Getting Featured.</h2>
-    <p>Get featured in the publication. Get free publicity. Or get the full AI growth system. Either way — you win.</p>
+    <h2>Stop Missing <br>$15K Commission Checks</h2>
+    <p>We'll analyze your lead flow, calculate your monthly losses, and show you exactly how to capture every opportunity.</p>
+    <div class="demo-box">
+      <h3>&#128222; Schedule Your Free Analysis</h3>
+      <div class="demo-phone">(512) 967-0954</div>
+      <p style="color:var(--text-3);font-size:14px">Or book below — we'll call you</p>
+    </div>
     <div class="cta-btns">
-      <a href="#" class="btn btn-gold" style="font-size:18px;padding:18px 44px">
-        Book Your Interview
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-      <a href="tel:+15129670954" class="call-btn" style="animation:none;box-shadow:0 4px 24px rgba(245,158,11,.25)">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="#000"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-        Call AI: (512) 967-0954
+      <a href="#" class="btn btn-orange" style="font-size:18px;padding:18px 44px">Book Free Analysis <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <a href="tel:+15129670954" class="call-btn" style="animation:none">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="#fff"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
+        Call AI Now
       </a>
     </div>
     <div class="guar">
       <svg viewBox="0 0 16 16"><path d="M8 0a8 8 0 100 16A8 8 0 008 0zm3.646 5.646l-4 4a.5.5 0 01-.708 0l-2-2a.5.5 0 11.708-.708L7.5 8.793l3.646-3.647a.5.5 0 01.708.708z"/></svg>
-      No contracts &middot; Performance-based &middot; We don't get paid unless you do
+      $497/mo &middot; Setup included &middot; 60-day money-back guarantee &middot; 5 spots left for Q2 2026
     </div>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="w">
     <div class="f-links">
-      <a href="#perks">Get Featured</a>
-      <a href="#services">Services</a>
-      <a href="#voice">AI Demo</a>
+      <a href="#problem">Problem</a>
+      <a href="#solution">Solution</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#voice">Demo</a>
       <a href="#team">Team</a>
-      <a href="#faq">FAQ</a>
     </div>
-    <p>&copy; 2026 Brokerage Intelligence Report by Elevated AI Solutions. All rights reserved.</p>
+    <p>&copy; 2026 Brokerage Intelligence. Stop missing calls. Start closing deals.</p>
   </div>
 </footer>
 
+<!-- TEST AI MODAL -->
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <h3>&#127908; Test Our AI Receptionist</h3>
+    <p style="color:var(--text-2);margin-bottom:16px">Call now to hear how AI handles real estate inquiries:</p>
+    <div class="modal-demo">
+      <div>&#128222; Call now:</div>
+      <div class="num">(512) 967-0954</div>
+      <div style="opacity:.85;font-size:14px">Try: "I'm looking for a 3-bedroom house in Austin"</div>
+    </div>
+    <div class="modal-features">
+      <div style="font-weight:600;color:var(--accent-light);margin-bottom:8px">You'll experience:</div>
+      <div>&#10003; Human-like conversation</div>
+      <div>&#10003; Property qualification</div>
+      <div>&#10003; Appointment booking</div>
+      <div>&#10003; Contact capture</div>
+    </div>
+    <a href="tel:+15129670954" class="btn btn-orange" style="width:100%;justify-content:center;margin-bottom:12px">Call Now</a>
+    <button class="modal-close" onclick="closeModal()">Close</button>
+  </div>
+</div>
+
 <script>
-// Nav scroll
 const n=document.getElementById('nav');
 window.addEventListener('scroll',()=>n.classList.toggle('sc',scrollY>40));
-
-// Reveal on scroll
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-
-// Smooth anchors
 document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}})});
+function openModal(){document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.classList.contains('modal-bg'))closeModal()});
 </script>
 </body>
 </html>
